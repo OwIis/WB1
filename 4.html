@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>박스모델수업</title>
+    <style>
+    /*
+    blcok level element-화면전체를 씀 display:inline를쓰면 크기만큼만 쓰게함
+    display:none은 해당부위를 사라지게 만듦
+    */
+    h1{
+      border-width: 5px;
+      border-color: red;
+      border-style: solid;
+      display: inline;
+      margin:3px;
+      padding:2px;
+    }
+    /*
+    inline element - 자신의 크기만큼만 씀
+    */
+    a{
+      border-width: 5px;
+      border-color: red;
+      border-style: solid;
+      display: block;
+      text-decoration: none;
+    }
+
+    /*
+    위내용들을 압축시킬 수 있음
+    h1, a{
+          border:5px; solid red;
+          padding:20px; -테두리와 글자사이의 간격
+          margin:20px;  -테두리와 테두리사아의 간격
+          display:block; -박스모델의 폭을 조정하기
+          width:100px;   -박스모델의 폭을 조정하기
+          }
+    */
+    body{
+      margin:10px
+    }
+    ol{
+      border-right:2px solid yellow;
+      width:200px;
+      padding:20px;
+    }
+
+
+    #grid{
+      border:5px solid pink;
+      display:grid;
+      grid-template-columns: 150px 1fr;
+    }
+
+    div{
+      border:5px solid gray;
+    }
+
+    </style>
+    <!-- 보이기안보이기~ -->
+    <script>
+      window.onload = function(){ 
+        console.log("hi")
+        document.write("nothing here");
+      };
+    </script>
+</head>
+<body>
+ <h1>박스모델수업 web2</h1>
+   <ol>
+     <li><a href="1.html">내가누구냐</li></a>
+     <li><a href="2.html">2.규선이다</li></a>
+     <li><a href="3.html">3.세계를 평정할</li></a>
+     <li><a href="4.html">4.박스모델</li></a>
+     <li><a href="5.html">5.그리드와 테이블차이</a></li>
+   </ol>
+
+   <div id="grid">
+     <div>navigation</div>
+     <div>article</div>
+  </div>
+</body>
+</html>
